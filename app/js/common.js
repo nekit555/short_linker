@@ -15,7 +15,7 @@ $("form").submit(function () {
             $('.input_link').val("");
             $('.error').text("");
 
-            $('.result-link').html('<a href="' + link.short_link + '">' + result + '</a>');
+            $('.result-link').html('<a target="_blank" href="' + link.short_link + '">' + result + '</a>');
             $('.result').css('display', 'block');
             
             $("form").trigger("reset");
