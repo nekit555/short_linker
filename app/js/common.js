@@ -1,13 +1,10 @@
 $("form").submit(function () {
-    console.log('Форма отправлена');
-    console.log($(this).serialize());
     $.ajax({
         type: "POST",
         url: "shorter.php",
         datatype: 'json',
         data: $(this).serialize()
     }).done(function (response) {
-        console.log(response);
         link = $.parseJSON(response);
         if (link.error != 1) {
 
